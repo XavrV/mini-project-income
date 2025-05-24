@@ -1,0 +1,40 @@
+gitignore_path = "/mnt/data/mini_project_income/.gitignore"
+
+gitignore_content = """\
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints
+
+# Local data files
+*.csv
+*.joblib
+*.pkl
+*.json
+
+# MLflow tracking output
+mlruns/
+results_out/
+split_artifacts/
+eda_artifacts/
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+"""
+
+with open(gitignore_path, "w") as f:
+    f.write(gitignore_content)
+
+gitignore_path
