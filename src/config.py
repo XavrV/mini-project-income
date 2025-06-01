@@ -1,5 +1,5 @@
 config = {
-    "path": "adult.csv",
+    "path": "data/adult.csv",
     "target": "income",
     "target_mapping": {"<=50K": 0, ">50K": 1},
     "expected_columns": [
