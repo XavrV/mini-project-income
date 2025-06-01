@@ -1,5 +1,3 @@
-# src/experiment.py
-
 import mlflow
 import mlflow.sklearn
 from sklearn.model_selection import GridSearchCV
@@ -38,8 +36,6 @@ def run_gridsearch_experiment(
     Lanza GridSearchCV sobre el pipeline y trackea todo automáticamente en MLflow.
     Guarda el mejor modelo y el config usados como artefactos.
     """
-    import os, json, joblib
-
     mlflow.sklearn.autolog()  # ¡clave! Trackea todo el GridSearch automáticamente
 
     with mlflow.start_run(tags=tags):

@@ -204,7 +204,8 @@ def build_pipeline(config: dict, features_dict: dict):
         model = DecisionTreeClassifier(**model_params)
     elif model_type == "RandomForestClassifier":
         model = RandomForestClassifier(**model_params)
-    # Agrega aquí otros modelos si lo deseas...
+
+    # Agregar aquí otros modelos
     else:
         raise NotImplementedError(f"Modelo no implementado: {model_type}")
 

@@ -1,5 +1,5 @@
 config = {
-    "path": "data/adult.csv",
+    "path": "adult.csv",
     "target": "income",
     "target_mapping": {"<=50K": 0, ">50K": 1},
     "expected_columns": [
@@ -70,61 +70,17 @@ config = {
         "race": {"min_freq": 500, "other_label": "Other"},
         "native.country": {"min_freq": 1000, "other_label": "Other"},
     },
-    "scaling": "standard",  # O tunéalo en param_grid
-    "encoding": "onehot",  # Si quieres tunear, agrega lógica para ordinal
+    "scaling": "standard",  # O tunéar en param_grid
+    "encoding": "onehot",
     "split": {"test_size": 0.2, "random_state": 42},
     "model": {
-        "type": "LogisticRegression",
-        "params": {"max_iter": 1000, "solver": "lbfgs"},
+        "type": "RandomForestClassifier",
+        "params": {"n_estimators": 100, "max_depth": None, "random_state": 42},
+        # "type": "LogisticRegression",
+        # "params": {"max_iter": 1000, "solver": "lbfgs"},
     },
-    "mlflow": {"tracking_uri": "file:./mlruns", "experiment_name": "Testeando"},
+    "mlflow": {
+        "tracking_uri": "file:./mlruns",
+        "experiment_name": "Mini_Proyecto_Adult_Income",
+    },
 }
-
-
-# otro posible src/config.py
-
-# Diccionario de configuración general del proyecto
-# config = {
-#     "path": "data/adult.csv",
-#     "target": "income",
-#     "target_mapping": {"<=50K": 0, ">50K": 1},
-#     "expected_columns": [
-#         # Lista de columnas esperadas...
-#     ],
-#     "features": [
-#         # Lista de features a conservar...
-#     ],
-#     "drop_features": ["education", "fnlwgt"],
-#     "num_features": [
-#         # Lista de columnas numéricas...
-#     ],
-#     "cat_features": [
-#         # Lista de columnas categóricas...
-#     ],
-#     "outliers": {
-#         "strategy": "clip",
-#         "params": {"pmin": 0.01, "pmax": 0.99}
-#     },
-#     "imputation": {
-#         "num_method": "median",
-#         "cat_method": "most_frequent",
-#         "cat_fill_value": "Missing"
-#     },
-#     "grouping": {
-#         # Umbrales por columna para agrupamiento de categorías raras
-#     },
-#     "scaling": "standard",
-#     "encoding": "onehot",
-#     "split": {
-#         "test_size": 0.2,
-#         "random_state": 42
-#     },
-#     "model": {
-#         "type": "LogisticRegression",
-#         "params": {"max_iter": 1000, "solver": "lbfgs"}
-#     },
-#     "mlflow": {
-#         "tracking_uri": "file:./mlruns",
-#         "experiment_name": "adult_income"
-#     }
-# }

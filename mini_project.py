@@ -70,7 +70,7 @@ print("Scikit-learn:", sklearn.__version__)
 
 
 # %%
-config = { ## Ya copiado!!!!!
+config = { ## 
     "path": "adult.csv",
     "target": "income",
     "target_mapping": {"<=50K": 0, ">50K": 1},
@@ -96,7 +96,7 @@ config = { ## Ya copiado!!!!!
     # Outliers (tuneable)
     "outliers": {
         "strategy": "clip",  # o "none"
-        "params": {"pmin": 0.01, "pmax": 0.99}  # Para tunear, pásalos en param_grid
+        "params": {"pmin": 0.01, "pmax": 0.99}  # Para tunear desde param_grid
     },
 
     # Imputación
@@ -117,9 +117,9 @@ config = { ## Ya copiado!!!!!
     },
 
 
-    "scaling": "standard",   # O tunéalo en param_grid
-    "encoding": "onehot",    # Si quieres tunear, agrega lógica para ordinal
-
+    "scaling": "standard",   # O tunéar en param_grid
+    "encoding": "onehot",    # 
+    
     "split": {
         "test_size": 0.2,
         "random_state": 42
@@ -132,13 +132,13 @@ config = { ## Ya copiado!!!!!
 
     "mlflow": {
         "tracking_uri": "file:./mlruns",
-        "experiment_name": "Testeando"
+        "experiment_name": "Mini_Project_ Adult_Income"
     }
 }
 
 
 # %% [markdown]
-# ### BLOQUE 3: Carga, Validación y Exploración Inicial YA COPIADO!!!!!
+# ### BLOQUE 3: Carga, Validación y Exploración Inicial
 
 # %%
 # [3.1] Carga del Dataset
@@ -322,7 +322,7 @@ data_dict = generate_data_dictionary(df, config["target"])
 save_initial_state(df, "adult_initial.csv")
 
 # %% [markdown]
-# ### BLOQUE 4: Procesamiento y Codificación del Target YA COPIADO!!!!!
+# ### BLOQUE 4: Procesamiento y Codificación del Target
 
 # %%
 # [4.1] Identificación y Resumen del Target
@@ -463,7 +463,7 @@ removed_rows = df[config["target"]].isna().sum()
 log_target_status(df, config["target"], removed_rows)
 
 # %% [markdown]
-# ### BLOQUE 5: Limpieza General y Revisión de Consistencias YA COPIADO!!!!!
+# ### BLOQUE 5: Limpieza General y Revisión de Consistencias
 
 # %%
 # [5.1] Eliminación de Duplicados
@@ -594,7 +594,7 @@ df = fix_column_types_and_formats(df)
 outliers_report = detect_gross_outliers(df, config["num_features"])
 
 # %% [markdown]
-# ### BLOQUE 6: Análisis Exploratorio de Datos (EDA) YA COPIADO!!!!!
+# ### BLOQUE 6: Análisis Exploratorio de Datos (EDA)
 
 # %%
 # [6.1] Estadísticos Descriptivos Generales
@@ -913,7 +913,7 @@ pipeline_issues = collect_pipeline_issues(df, features_dict)
 save_feature_config(features_dict, "features_config.json")
 
 # %% [markdown]
-# ### BLOQUE 8: Preparación de X/y y Split Estratificado YA COPIADO!!!!!
+# ### BLOQUE 8: Preparación de X/y y Split Estratificado
 
 # %%
 # [8.1] Preparación de Features y Target para el Split
@@ -1036,7 +1036,7 @@ document_eda_findings(findings, save_path="eda_findings.txt")
 # save_eda_artifacts(plots, tables, out_dir="eda_artifacts")
 
 # %% [markdown]
-# ### BLOQUE 9: Wrappers, ColumnTransformer y Pipeline Modular YA COPIADO!!!!!
+# ### BLOQUE 9: Wrappers, ColumnTransformer y Pipeline Modular
 
 # %%
 # === BLOQUE 9: WRAPPERS, COLUMNTRANSFORMER Y PIPELINE MODULAR ===
@@ -1239,7 +1239,7 @@ def make_json_serializable(d):
 
 
 # %% [markdown]
-# ### BLOQUE 10: MLflow, Métricas, Experimentos y Comparación YA COPIADO!!!!!
+# ### BLOQUE 10: MLflow, Métricas, Experimentos y Comparación
 
 # %%
 # === BLOQUE 10: EXPERIMENTACIÓN AUTOMÁTICA Y MLflow AUTOLOG ===

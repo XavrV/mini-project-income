@@ -33,7 +33,7 @@ def describe_categorical(df: pd.DataFrame, cat_cols: list) -> pd.DataFrame:
                 "n_unique": df[col].nunique(),
                 "most_freq": counts.idxmax() if not counts.empty else None,
                 "freq_most_freq": counts.max() if not counts.empty else None,
-                "top_5": counts.head(5).to_dict(),
+                "top_5": counts.head(10).to_dict(),
             }
         )
     desc = pd.DataFrame(res)
