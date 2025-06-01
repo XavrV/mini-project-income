@@ -55,7 +55,7 @@ config = {
         "strategy": "clip",  # o "none"
         "params": {"pmin": 0.01, "pmax": 0.99},  # Para tunear, pásalos en param_grid
     },
-    # Imputación
+    # Imputación de NaNs
     "imputation": {
         "num_method": "median",
         "cat_method": "most_frequent",

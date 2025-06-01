@@ -17,7 +17,7 @@ __pycache__/
 
 # MLflow tracking output
 mlruns/
-results_out/
+#results_out/
 split_artifacts/
 eda_artifacts/
 
