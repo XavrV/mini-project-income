@@ -81,6 +81,6 @@ config = {
     },
     "mlflow": {
         "tracking_uri": "file:./mlruns",
-        "experiment_name": "Mini_Proyecto_Adult_Income",
+        "experiment_name": "Mini_Proyecto_Adult_Income_LR",
     },
 }
