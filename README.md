@@ -1,4 +1,4 @@
-# 🧑‍💻 Mini Project Income – Instrucciones de Uso
+# 🧑‍💻 Mini Project Income
 
 ¡Bienvenido/a! Este proyecto es **totalmente reproducible y portátil**.
 
@@ -37,7 +37,6 @@
 
 
 **¿Dudas o problemas?**
-Revisa el README, los comentarios del notebook, o abre un Issue en el repo.
 
 ---
 
@@ -63,5 +62,5 @@ El script realiza la carga, limpieza, ingeniería de características, división
 
 ## Próximos pasos
 
-Explora los notebooks para ver ejemplos de EDA y cómo se componen las distintas etapas del pipeline.  Modifica `src/config.py` para ajustar columnas, algoritmos o parámetros y continúa experimentando.
+Explora los notebooks para EDA y cómo se componen las distintas etapas del pipeline.  Modifica `src/config.py` para ajustar columnas, algoritmos, modelos o parámetros y continúa experimentando.
 
