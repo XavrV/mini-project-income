@@ -47,7 +47,7 @@ Este proyecto contiene un pipeline modular de análisis y modelado con *scikit-l
 - **`src/`** – módulos del pipeline (carga y validación, limpieza, ingeniería de variables, partición de datos, construcción del modelo y experimentación).
 - **`data/`** – carpeta donde se colocará el dataset `adult.csv` y otros artefactos generados.
 - **`main.py`** – script que orquesta todo el flujo de principio a fin.
-- **Notebooks** – `01_pipeline_explorable.ipynb` y `mini_project_adult_income.ipynb` permiten explorar el pipeline de forma interactiva.
+- **Notebooks** – `mini_project_adult_income.ipynb` permite explorar el pipeline de forma interactiva.
 
 
 ## Uso rápido
